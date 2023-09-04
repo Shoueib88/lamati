@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lam3ty/consts/style.dart';
+import '../cars/newcar_screen.dart';
 
 class HomScreen extends StatefulWidget {
   const HomScreen({super.key});
@@ -58,7 +59,10 @@ class _HomScreenState extends State<HomScreen> {
                               decoration: StyleConst.blueboxdelogo,
                               child: TextButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushNamed('addcar');
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => AddCar()));
                                   },
                                   child: Row(
                                       mainAxisAlignment:
@@ -142,10 +146,12 @@ class _HomScreenState extends State<HomScreen> {
                                                           .blueboxdelogo,
                                                       child: TextButton(
                                                           onPressed: () {
-                                                            Navigator.of(
-                                                                    context)
-                                                                .pushNamed(
-                                                                    'addcar');
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            AddCar()));
                                                           },
                                                           child: Text(
                                                             "اضافة الان",
