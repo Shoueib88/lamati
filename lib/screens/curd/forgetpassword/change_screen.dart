@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lam3ty/consts/style.dart';
 import 'package:lam3ty/screens/homepage/cars/contorallar/caranim.dart';
+import 'package:lam3ty/screens/curd/forgetpassword/success_change.dart';
 
 import '../../homepage/profile/contraller/profile_contraller.dart';
 
@@ -55,7 +56,7 @@ class _ChangeState extends State<Change> {
                     decoration: StyleConst.blueboxdelogo,
                     child: MaterialButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed('success');
+                          MaterialPageRoute(builder: (context) => Success());
                         },
                         child: Text('تغيير',
                             style: StyleConst.whiteTextStylelogo))),
